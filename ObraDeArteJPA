@@ -1,0 +1,17 @@
+@Entity
+@Table(name="Obra")
+public class ObraDeArteJPA {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTY)
+    private int id;
+    private String titulo;
+    @Column(name = "nome_autor", nultable = true)
+    private String autor;
+    private String tecnica;
+    private String tipo;
+    private String procedencia;
+    private String dimensoes;
+    @Temporal(TemporalType.DATE)
+    @Column(name="data_obra", nulable = true)
+    private Calendar dataObra;
+}
